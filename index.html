@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>$LOOK — Dramatic MemeCoin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#0b0c10;--fg:#e6e8ef;--muted:#9ea3b0;
+      --accent:#7c4dff;--accent2:#00e5ff;--border:#1e1f24;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--fg);font-family:'Inter',sans-serif;line-height:1.5}
+    header{display:flex;justify-content:space-between;align-items:center;
+      padding:20px 32px;border-bottom:1px solid var(--border);}
+    .brand{font-weight:700;font-size:20px;}
+    nav a{margin-left:14px;text-decoration:none;color:var(--fg);font-weight:500;}
+    .hero{max-width:900px;margin:100px auto;padding:0 24px;text-align:center;}
+    .hero h1{font-size:clamp(40px,6vw,64px);white-space:nowrap;
+      font-weight:700;background:linear-gradient(90deg,#fff,#9fc5ff,#fff);
+      -webkit-background-clip:text;background-clip:text;color:transparent;}
+    .hero p{color:var(--muted);margin-top:16px;font-size:18px;}
+    .row{display:flex;justify-content:center;gap:16px;margin-top:32px;flex-wrap:wrap;}
+    .btn{padding:12px 20px;border-radius:10px;font-weight:600;text-decoration:none;
+      transition:.2s;border:1px solid var(--border);}
+    .btn--primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#0b0c10;}
+    .btn--secondary{background:transparent;color:#fff;}
+    .card{max-width:400px;margin:40px auto;padding:20px;border:1px solid var(--border);
+      border-radius:12px;text-align:left;}
+    .card label{display:block;font-size:14px;color:var(--muted);margin-bottom:6px;}
+    .card input{width:100%;padding:12px;border-radius:8px;border:1px solid var(--border);
+      background:#14151b;color:#fff;font-family:'Inter',sans-serif;}
+    footer{text-align:center;color:var(--muted);font-size:14px;padding:40px 20px;border-top:1px solid var(--border);margin-top:60px;}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">$LOOK</div>
+    <nav>
+      <a href="https://dexscreener.com/solana/4pvLQwZL3BLkk6CLg8k4k5PGv7gpC4WoShLS2ccaNsEK" target="_blank">Chart</a>
+      <a href="https://jup.ag/swap?inputMint=So11111111111111111111111111111111111111112&outputMint=6DHfjAnqqtsArRmXmJokXR8533CsHAG6UtnRZNhtYTbf" target="_blank">Buy</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>The Dramatic Look</h1>
+    <p>$LOOK is a meme coin inspired by the internet’s most iconic dramatic stare. Minimal, bold, and built for impact.</p>
+    <div class="row">
+      <a class="btn btn--primary" href="https://jup.ag/swap?inputMint=So11111111111111111111111111111111111111112&outputMint=6DHfjAnqqtsArRmXmJokXR8533CsHAG6UtnRZNhtYTbf" target="_blank">Buy on Jupiter</a>
+      <a class="btn btn--secondary" href="https://dexscreener.com/solana/4pvLQwZL3BLkk6CLg8k4k5PGv7gpC4WoShLS2ccaNsEK" target="_blank">View Chart</a>
+    </div>
+    <div class="card">
+      <label for="mint">Token mint</label>
+      <input id="mint" readonly value="6DHfjAnqqtsArRmXmJokXR8533CsHAG6UtnRZNhtYTbf" onclick="navigator.clipboard.writeText(this.value);alert('Copied: '+this.value)"/>
+    </div>
+  </section>
+
+  <footer>© $LOOK — Built on Solana · Meme responsibly</footer>
+</body>
+</html>
